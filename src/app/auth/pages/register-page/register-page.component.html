@@ -30,7 +30,7 @@
                            class="form-control"
                            placeholder="Email del usuario">
                     <span *ngIf="isValidField('email')" class="form-text text-danger">
-                        mensaje de error del email
+                        El email tiene que tener el formato correcto
                     </span>
                 </div>
             </div>
@@ -115,4 +115,4 @@
 <pre>{{ myForm.value.password | json }}</pre>
 
 <h5>Confirmar</h5>
-<pre>{{ myForm.value.password | json }}</pre>
+<pre>{{ myForm.controls['password2'].errors | json }}</pre>
